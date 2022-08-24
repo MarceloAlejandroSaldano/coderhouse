@@ -1,0 +1,10 @@
+ul li a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    padding-left: 0rem;
+    padding-right: 2rem;
+    color: cornflowerblue;
+        &:hover{
+           color: whitesmoke;
+    }    
+}

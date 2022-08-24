@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,100;1,100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  padding-left: 0rem;
+  padding-right: 2rem;
+  color: cornflowerblue;
+}
+ul li a:hover {
+  color: whitesmoke;
+} /*----------- MOBILE FIRST ------------*/
+/*--------      HEADER       -------*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  grid-area: header;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  background-color: rgba(236, 229, 164, 0.612);
+}
+
+header nav {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+}
+
+.ulHeader {
+  background-color: rgba(236, 229, 164, 0.612);
+  border: 2px solid gold;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ulFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+/*-----------------      MAIN       --------------*/
+h1 {
+  color: forestgreen;
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  text-align: center;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+  word-spacing: -1px;
+  border: 10px rgb(221, 143, 40);
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  color: forestgreen;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  color: forestgreen;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  width: 100%;
+}
+
+.mainHome {
+  color: rgb(250, 252, 255);
+  background: linear-gradient(rgba(236, 229, 164, 0.612), rgb(175, 187, 198));
+}
+
+main, article, p {
+  text-align: center;
+}
+
+.tituloInicial1 {
+  color: rgb(250, 252, 255);
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 40px;
+  border: 2px solid gold;
+  grid-area: tituloInicial1;
+  background: linear-gradient(rgba(236, 229, 164, 0.612), blue);
+}
+
+.tituloInicial2 {
+  color: rgb(250, 252, 255);
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 40px;
+  border: 2px solid gold;
+  grid-area: tituloInicial2;
+  background: linear-gradient(rgba(236, 229, 164, 0.612), blue);
+}
+
+/*----------------      FOOTER       ---------------*/
+footer {
+  background-color: rgba(236, 229, 164, 0.612);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  align-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+iframe {
+  align-content: center;
+  margin: 10px 10px 10px 10px;
+  width: 300px;
+  height: 250px;
+  border: 8px solid grey;
+}
+
+.iframeHomeMotos {
+  grid-area: iframeHomeMotos;
+}
+
+.iframHomeAutos {
+  grid-area: iframHomeAutos;
+}
+
+.parrafoMainHome {
+  grid-area: parrafoMainHome;
+  color: black;
+}
+
+.subtituloIframeHome {
+  grid-area: subtituloIframeHome;
+}
+
+.homeContainer1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeContainer2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgHome.fondoMotos {
+  width: 300px;
+  height: 250px;
+  border: 8px solid grey;
+  background: url(../imagenes/motos_motos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  grid-area: imgHomeFondoMotos;
+}
+
+.imgHome.fondoAutos {
+  width: 300px;
+  height: 250px;
+  border: 8px solid grey;
+  background: url(../imagenes/autos_autos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  grid-area: imgHomeFondoAutos;
+}
+
+.grillaMainHome {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "tituloInicial1" "tituloInicial2" "parrafoMainHome" "imgHomeFondoMotos" "imgHomeFondoAutos" "subtituloIframeHome" "iframeHomeMotos" "iframeHomeAutos";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  gap: 10px;
+}
+
+.divFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.iconsFooter {
+  display: flex;
+  align-items: center;
+}
+
+.cursoBasicoAuto {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 2px solid gold;
+  gap: 4px;
+}
+
+.cursoIntermedioAuto {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 2px solid gold;
+  gap: 4px;
+}
+
+.cursoAvanzadoAuto {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 2px solid gold;
+  gap: 4px;
+}
+
+.cursoBasicoMoto {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 2px solid gold;
+  gap: 4px;
+}
+
+.cursoAvanzadoMoto {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 2px solid gold;
+  gap: 4px;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.grillaBodyCursos {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+}
+
+/*---------------------------- Tablet ----------------------------------*/
+/*-------------      HEADER       -----------*/
+@media screen and (min-width: 600px) {
+  header {
+    grid-area: header;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    background-color: rgba(236, 229, 164, 0.612);
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  li {
+    display: inline-block;
+  }
+  .ulHeader {
+    background-color: rgba(236, 229, 164, 0.612);
+    border: 2px solid gold;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .ulFooter {
+    display: flex;
+    flex-direction: column;
+  }
+  /*------------------      MAIN       ---------------*/
+  h1 {
+    color: forestgreen;
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    word-spacing: -1px;
+    padding: 20px;
+    margin: 40px 20px 40px 20px;
+    border: 10px rgb(221, 143, 40);
+  }
+  h2 {
+    font-family: "Open Sans", sans-serif;
+    color: forestgreen;
+  }
+  h3 {
+    font-family: "Open Sans", sans-serif;
+    color: forestgreen;
+  }
+  main {
+    grid-area: main;
+    display: flex;
+    width: 100%;
+  }
+  .tituloInicial {
+    color: cornflowerblue;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    border: 2px solid gold;
+    grid-area: tituloInicial;
+  }
+  /*------------------      FOOTER       ---------------------*/
+  footer {
+    background-color: rgba(236, 229, 164, 0.612);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+  }
+  img {
+    align-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  iframe {
+    align-content: center;
+    margin: 40px 40px 40px 40px;
+  }
+  .grillaBodyHome {
+    display: grid;
+    width: 100%;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 10px;
+  }
+  .grillaMainHome {
+    display: grid;
+    width: 100%;
+    grid-template-areas: "tituloInicial1" "tituloInicial2" "parrafoMainHome" "carousel" "homeContainer1" "subtituloIframeHome" "homeContainer2";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 10px;
+  }
+  .homeContainer1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .homeContainer2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .imgHome.fondoMotos {
+    width: 300px;
+    height: 250px;
+    border: 8px solid grey;
+    background: url(../imagenes/motos_motos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    grid-area: imgHomeFondoMotos;
+  }
+  .imgHome.fondoAutos {
+    width: 300px;
+    height: 250px;
+    border: 8px solid grey;
+    background: url(../imagenes/autos_autos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    grid-area: imgHomeFondoAutos;
+  }
+  .carousel-item {
+    grid-area: carousel;
+  }
+  .grillaBodyCursos {
+    display: grid;
+    width: 100%;
+    grid-template-areas: "header         header" "tituloInicial  tituloInicial" "main           main" "footer         footer";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 10px;
+  }
+  .cursosContainer {
+    display: flex;
+    justify-content: space-around;
+    -moz-column-gap: 4px;
+         column-gap: 4px;
+  }
+  .cursos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 2px solid gold;
+  }
+  .divFooter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
