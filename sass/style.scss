@@ -1,125 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,100;1,100&display=swap');
-
+@import "listas";
+@import "generales";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@import "listas";
+
 /*----------- MOBILE FIRST ------------*/
 /*--------      HEADER       -------*/
-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
+
+.boton {
+    border: 2px solid grey;
+    border-radius: .2em;
+    background-color: red;
+  }
+  
+.boton--cursos {
+    @extend .boton;
+    background-color: gold;
 }
-header{
-    grid-area: header;
-    width: 100%;
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2rem;
-    background-color: rgba(236, 229, 164, 0.612);
-}
-header nav {
-    height: 100%;
-}
-a{
-    text-decoration: none;
-}
-li{
-    display: inline-block;
-}
+
+
 
 .ulHeader{
     background-color: rgba(236, 229, 164, 0.612);
     border: 2px solid gold;
-    height: 90%;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-around;
+    padding-left: 0rem;
 }
+
+@mixin logo ($width, $height){
+    width: $width;
+    height: $height;    
+}
+
+.logo{
+    @include logo(100px, 100px)
+}
+
 .ulFooter{
     display: flex;
     flex-direction: column;
+    padding-left: 0rem;
 }
-
 
 /*-----------------      MAIN       --------------*/
 
-h1{
-    color: forestgreen;
-    font-family: 'DM Sans', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    text-align: center;
-    line-height:normal;
-    letter-spacing:-1px;
-    text-transform: capitalize;
-    word-spacing: -1px;   
-    border: 10px rgb(221, 143, 40);
-}
-h2{
-    font-family: 'Open Sans', sans-serif;
-    color: forestgreen;
-    text-align: center;
 
-}
-h3{
-    font-family: 'Open Sans', sans-serif;
-    color: forestgreen;
-}
 
-main{
-    grid-area: main;
-    display: flex;
-    width: 100%;
-}
-.mainHome{
-    color: rgb(250, 252, 255);
-    background: linear-gradient( rgba(236, 229, 164, 0.612), rgb(175, 187, 198));
-}
 main, article, p{
     text-align: center;
+    color: black;
 }
 
 .tituloInicial1{
-    color: rgb(250, 252, 255);
+    color: black;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 40px;
-    border: 2px solid gold;
+    border: 2px solid grey;
     grid-area: tituloInicial1;
-    background: linear-gradient( rgba(236, 229, 164, 0.612), blue);
+    background-color:rgba(236, 229, 164, 0.612);
 }
 .tituloInicial2{
-    color: rgb(250, 252, 255);
+    color: black;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
+    font-weight: 550;
+    font-size: 27px;
     margin-bottom: 40px;
-    border: 2px solid gold;
+    border: 2px solid grey;
     grid-area: tituloInicial2;
-    background: linear-gradient( rgba(236, 229, 164, 0.612), blue);
+    background-color: rgba(236, 229, 164, 0.612);
+    margin: 0 50px;
+}
+.tituloInicialSub2{
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 27px;
+    margin-bottom: 40px;
+    border: 2px solid grey;
+    grid-area: tituloInicial2;
+    background-color: rgba(236, 229, 164, 0.612);
+    margin: 10px 50px;
 }
 
 /*----------------      FOOTER       ---------------*/
-footer{
-    background-color: rgba(236, 229, 164, 0.612);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 img{
     align-content:center;
@@ -146,6 +122,7 @@ iframe{
 }
 .subtituloIframeHome{
     grid-area: subtituloIframeHome;
+    margin-top: 15px;
 }
 
 .homeContainer1{
@@ -153,6 +130,7 @@ iframe{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 .homeContainer2{
     display: flex;
@@ -195,7 +173,7 @@ iframe{
     "iframeHomeAutos";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto auto auto auto;
-    gap: 10px;
+
 }
 
 .divFooter{
@@ -260,7 +238,6 @@ footer{
     "footer";
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
-    gap: 10px;
 }
 
 
@@ -272,69 +249,39 @@ footer{
     header{
         grid-area: header;
         width: 100%;
-        height: 40vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 2rem;
         background-color: rgba(236, 229, 164, 0.612);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
-    ul{
-        list-style-type: none;
-    }
-    a{
-        text-decoration: none;
-    }
-    li{
-        display: inline-block;
-    }
+
 
     .ulHeader{
         background-color: rgba(236, 229, 164, 0.612);
-        border: 2px solid gold;
+        border: 2px solid grey;
         height: 90%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content:space-around;
     }
     .ulFooter{
         display: flex;
         flex-direction: column;
+        padding-left: 0rem;
     }
     
     
     /*------------------      MAIN       ---------------*/
     
     h1{
-        color: forestgreen;
-        font-family: 'DM Sans', sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 30px;
-        text-align: center;
-        line-height:normal;
-        letter-spacing:-1px;
-        text-transform: capitalize;
-        word-spacing: -1px;
         padding: 20px;
         margin: 40px 20px 40px 20px;
-        border: 10px rgb(221, 143, 40);
-    }
-    h2{
-        font-family: 'Open Sans', sans-serif;
-        color: forestgreen;
-    
-    }
-    h3{
-        font-family: 'Open Sans', sans-serif;
-        color: forestgreen;
-    }
-    
-    main{
-        grid-area: main;
-        display: flex;
-        width: 100%;
     }
     .tituloInicial{
         color: cornflowerblue;
@@ -375,8 +322,7 @@ footer{
         "main"
         "footer";
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        gap: 10px;
+        grid-template-rows: auto auto auto;
     }
     
     .grillaMainHome {
@@ -392,7 +338,14 @@ footer{
         "homeContainer2";
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto auto auto;
-        gap: 10px;
+
+    }
+
+    .tituloInicial2{
+        margin-bottom: 20px;
+    }
+    .tituloInicialSub2{
+        margin-bottom: 20px;    
     }
     .homeContainer1{
         display: flex;
@@ -443,7 +396,6 @@ footer{
         "footer         footer";
         grid-template-columns: auto  auto;
         grid-template-rows: auto auto auto auto;
-        gap: 10px;
     }
     
     .cursosContainer{

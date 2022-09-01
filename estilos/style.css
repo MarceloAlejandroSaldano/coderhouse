@@ -1,21 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,100;1,100&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul li a {
   font-family: "Open Sans", sans-serif;
   font-weight: bolder;
-  padding-left: 0rem;
-  padding-right: 2rem;
-  color: cornflowerblue;
+  color: white;
 }
-ul li a:hover {
-  color: whitesmoke;
-} /*----------- MOBILE FIRST ------------*/
-/*--------      HEADER       -------*/
+
+a:hover {
+  color: white;
+  background-color: grey;
+  transition-duration: 0.5s;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -27,42 +34,36 @@ body {
 header {
   grid-area: header;
   width: 100%;
-  height: 40vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
   background-color: rgba(236, 229, 164, 0.612);
+  background: linear-gradient(to top, white, #eea849);
 }
 
 header nav {
   height: 100%;
 }
 
-a {
-  text-decoration: none;
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
 }
 
-li {
-  display: inline-block;
-}
-
-.ulHeader {
+footer {
   background-color: rgba(236, 229, 164, 0.612);
-  border: 2px solid gold;
-  height: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  background: linear-gradient(to bottom, white, #eea849);
 }
 
-.ulFooter {
-  display: flex;
-  flex-direction: column;
-}
-
-/*-----------------      MAIN       --------------*/
 h1 {
   color: forestgreen;
   font-family: "DM Sans", sans-serif;
@@ -79,63 +80,105 @@ h1 {
 
 h2 {
   font-family: "Open Sans", sans-serif;
-  color: forestgreen;
+  color: black;
   text-align: center;
 }
 
 h3 {
   font-family: "Open Sans", sans-serif;
-  color: forestgreen;
+  color: black;
 }
 
-main {
-  grid-area: main;
-  display: flex;
-  width: 100%;
+button:hover {
+  background-color: greenyellow;
+  transition-duration: 3s;
 }
 
-.mainHome {
-  color: rgb(250, 252, 255);
-  background: linear-gradient(rgba(236, 229, 164, 0.612), rgb(175, 187, 198));
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-main, article, p {
-  text-align: center;
+/*----------- MOBILE FIRST ------------*/
+/*--------      HEADER       -------*/
+.boton, .boton--cursos {
+  border: 2px solid grey;
+  border-radius: 0.2em;
+  background-color: red;
 }
 
-.tituloInicial1 {
-  color: rgb(250, 252, 255);
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 40px;
-  margin-top: 40px;
-  border: 2px solid gold;
-  grid-area: tituloInicial1;
-  background: linear-gradient(rgba(236, 229, 164, 0.612), blue);
+.boton--cursos {
+  background-color: gold;
 }
 
-.tituloInicial2 {
-  color: rgb(250, 252, 255);
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 40px;
-  margin-bottom: 40px;
-  border: 2px solid gold;
-  grid-area: tituloInicial2;
-  background: linear-gradient(rgba(236, 229, 164, 0.612), blue);
-}
-
-/*----------------      FOOTER       ---------------*/
-footer {
+.ulHeader {
   background-color: rgba(236, 229, 164, 0.612);
-  width: 100%;
+  border: 2px solid gold;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  padding-left: 0rem;
 }
 
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.ulFooter {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0rem;
+}
+
+/*-----------------      MAIN       --------------*/
+main, article, p {
+  text-align: center;
+  color: black;
+}
+
+.tituloInicial1 {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  margin-top: 40px;
+  border: 2px solid grey;
+  grid-area: tituloInicial1;
+  background-color: rgba(236, 229, 164, 0.612);
+}
+
+.tituloInicial2 {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 27px;
+  margin-bottom: 40px;
+  border: 2px solid grey;
+  grid-area: tituloInicial2;
+  background-color: rgba(236, 229, 164, 0.612);
+  margin: 0 50px;
+}
+
+.tituloInicialSub2 {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 27px;
+  margin-bottom: 40px;
+  border: 2px solid grey;
+  grid-area: tituloInicial2;
+  background-color: rgba(236, 229, 164, 0.612);
+  margin: 10px 50px;
+}
+
+/*----------------      FOOTER       ---------------*/
 img {
   align-content: center;
   margin-top: 40px;
@@ -165,6 +208,7 @@ iframe {
 
 .subtituloIframeHome {
   grid-area: subtituloIframeHome;
+  margin-top: 15px;
 }
 
 .homeContainer1 {
@@ -172,6 +216,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .homeContainer2 {
@@ -209,7 +254,6 @@ iframe {
   grid-template-areas: "tituloInicial1" "tituloInicial2" "parrafoMainHome" "imgHomeFondoMotos" "imgHomeFondoAutos" "subtituloIframeHome" "iframeHomeMotos" "iframeHomeAutos";
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto auto auto auto;
-  gap: 10px;
 }
 
 .divFooter {
@@ -279,7 +323,6 @@ footer {
   grid-template-areas: "header" "main" "footer";
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
-  gap: 10px;
 }
 
 /*---------------------------- Tablet ----------------------------------*/
@@ -288,63 +331,34 @@ footer {
   header {
     grid-area: header;
     width: 100%;
-    height: 40vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 2rem;
     background-color: rgba(236, 229, 164, 0.612);
-  }
-  ul {
-    list-style-type: none;
-  }
-  a {
-    text-decoration: none;
-  }
-  li {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
   .ulHeader {
     background-color: rgba(236, 229, 164, 0.612);
-    border: 2px solid gold;
+    border: 2px solid grey;
     height: 90%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
   }
   .ulFooter {
     display: flex;
     flex-direction: column;
+    padding-left: 0rem;
   }
   /*------------------      MAIN       ---------------*/
   h1 {
-    color: forestgreen;
-    font-family: "DM Sans", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    text-align: center;
-    line-height: normal;
-    letter-spacing: -1px;
-    text-transform: capitalize;
-    word-spacing: -1px;
     padding: 20px;
     margin: 40px 20px 40px 20px;
-    border: 10px rgb(221, 143, 40);
-  }
-  h2 {
-    font-family: "Open Sans", sans-serif;
-    color: forestgreen;
-  }
-  h3 {
-    font-family: "Open Sans", sans-serif;
-    color: forestgreen;
-  }
-  main {
-    grid-area: main;
-    display: flex;
-    width: 100%;
   }
   .tituloInicial {
     color: cornflowerblue;
@@ -378,8 +392,7 @@ footer {
     width: 100%;
     grid-template-areas: "header" "main" "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    gap: 10px;
+    grid-template-rows: auto auto auto;
   }
   .grillaMainHome {
     display: grid;
@@ -387,7 +400,12 @@ footer {
     grid-template-areas: "tituloInicial1" "tituloInicial2" "parrafoMainHome" "carousel" "homeContainer1" "subtituloIframeHome" "homeContainer2";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto auto auto;
-    gap: 10px;
+  }
+  .tituloInicial2 {
+    margin-bottom: 20px;
+  }
+  .tituloInicialSub2 {
+    margin-bottom: 20px;
   }
   .homeContainer1 {
     display: flex;
@@ -431,7 +449,6 @@ footer {
     grid-template-areas: "header         header" "tituloInicial  tituloInicial" "main           main" "footer         footer";
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto auto;
-    gap: 10px;
   }
   .cursosContainer {
     display: flex;
