@@ -10,51 +10,68 @@
     <title>Nosotros - Escuela de Manejo Michél - Autoescuela y Motoescuela</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <div>
-            <img  class="logo" src="../imagenes/logo2.jpg" alt="Logo"><a href="index.html"></a>
+            <a href="../index.html"><img  class="logo" src="../imagenes/logo2.jpg" alt="Logo"></a>
         </div>
-        <nav>
-            <ul class="ulHeader">
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="./cursos.html">Cursos y Tarifas</a>
-                </li>
-                <li>
-                    <a href="./nosotros.html">Nosotros</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
+        <div>
+            <h1 class="tituloHeader"> AUTOESCUELA Y MOTOESCUELA MICHÉL</h1>
+            <nav>
+                <ul class="ulHeader">
+                    <li class="liHeader">
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li class="liHeader">
+                        <a href="./cursos.html">Cursos y Tarifas</a>
+                    </li>
+                    <li class="liHeader">
+                        <a href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="liHeader">
+                        <a href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="liHeader">
+                        <a href="./trámites.html">Trámites Adicionales</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>   
     </header>
     <main>
         <section>
             <h1 class="tituloInicial1"> Escuela de Manejo Michél</h1>
-            <h1 class="tituloInicialSub2"> Autoescuela y Motoescuela</h1>
-            <h2>Clases Teóricas</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem quod, officiis minima quo, commodi veritatis odit molestiae ducimus quis, harum exercitationem? Magnam illum accusantium consequuntur ea mollitia ratione assumenda.</p>
-        </section>
-        <section>
-            <h2>Clases Prácticas</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem quod, officiis minima quo, commodi veritatis odit molestiae ducimus quis, harum exercitationem? Magnam illum accusantium consequuntur ea mollitia ratione assumenda.</p>
+            <h1 class="tituloInicialSub2"> Sobre nosotros..</h1>
+            <h2>Más sobre nuestras clases</h2>
+            <p>Las clases brindadas en nuestra Academia de manejo permiten que cada alumno reciba todas las técnicas para manejar correctamente y salir a la calle con seguridad y confianza.</p><br>
+            <div class="clases">
+                <div>
+                    <h2>Clases Teóricas</h2><br>
+                    <p>Cada uno de nuestros cursos incluyen: Clases teóricas de preparación previa a realizar la práctica, el material para el examen teórico de conducción y una serie de indicaciones para que puedas rendir de la mejor forma en una única vez.</p><br>
+                </div>
+                <div>
+                    <h2>Clases Prácticas</h2><br>
+                    <p> Contamos con vehículos propios doble y simple comando, además de motovehículos propios de la autoescuela. </p><br>
+                    <p>En caso de que no cuentes con vehículo para rendir el examen práctico para la licencia de conducir podes contratar uno de nuestros vehículos para hacerlo, con un instructor acompañante para rendir el examen de conducir con el vehículo de la academia.</p>
+                </div>
+            </div>
+            <button class="boton--cursos">
+                <a href="">Consultar disponibilidad de Auto/Moto con instructor</a>
+            </button><br>
         </section>
         <section>
             <h3>Trabajar con nosotros</h3>
-            <article>
-                <form action="#">
+            <p>Si estas interesado/a en ser parte del staff podrás contactarnos.</p>
+            <div>
+                <form class="form" action="#">
                     <input type="text" placeholder="Nombre y Apellido"><br>
                     <label for="email">E-mail:
                         <input type="email" placeholder="aaa@gmail.com" name="email"><br>
                     </label>
-                    <label for="Observaciones"> Comentarios:<br>
-                        <textarea placeholder="Comentarios"></textarea>
+                    <label for="Observaciones"> Comentanos tus expectativas, experiencia o lo que consideres importante:<br>
+                        <textarea placeholder=""></textarea>
                     </label> <br>
-                    <input type="number" placeholder="Edad"><br>
-                    <div><p>Cuenta con auto/moto para el examen?</p>
+                    
+                    <div><p>Tenes licencia de conducir de auto y/o moto?</p>
                         <div>SI
                             <input type="radio" name="lado" value="si">
                         </div>
@@ -62,21 +79,16 @@
                             <input type="radio" name="lado" value="no">
                         </div>
                     </div>
-                    <p>Que curso eligió?</p>
-                    <select name="letra" id="letra"> 
-                        <option value="x">Auto</option>
-                        <option value="y">Moto</option>
-                        <option value="z">Auto y Moto</option>
-                    </select>
+                    
                     <div>Queres recibir info sobre nosotros?
                     <input type="checkbox" name="acepta" value="1"></div>
-                    <input type="submit" value="PASAME LA DATA">
-                    <input type="reset" value="RESETEAR">
+                    <input type="submit" value="Cargar CV">
+                    <input type="submit" value="Enviar">
                 </form>
-            </article>
+            </div>
         </section>
     </main>    
-    <footer class="footer">
+    <footer>
         <div class="divFooter">
             <h4>UBICACION</h4>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.30600311027!2d-58.40436768477126!3d-34.571122980467905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb56f69ca9fbf%3A0x7a546fefb3a916fc!2sCircuito%20KDT!5e0!3m2!1ses-419!2sar!4v1659619544351!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -87,16 +99,16 @@
                 <nav>
                     <ul class="ulFooter">
                         <li>
-                            <a href="../index.html">Exámenes prácticos reales</a>
+                            <a href="../index.html">Exámenes Prácticos Reales</a>
                         </li>
                         <li>
                             <a href="../secciones/contacto.html">Contacto</a>
                         </li>
                         <li>
-                            <a href="../secciones/cursos.html">Cursos de auto</a>
+                            <a href="../secciones/cursos.html">Cursos de Auto</a>
                         </li>
                         <li>
-                            <a href="../secciones/cursos.html">Cursos de moto</a>
+                            <a href="../secciones/cursos.html">Cursos de Moto</a>
                         </li>
                         <li>
                             <a href="../secciones/cursos.html">Precios y Tarifas</a>
@@ -105,7 +117,10 @@
                             <a href="../secciones/nosotros.html">Clases Teóricas/Prácticas</a>
                         </li>
                         <li>
-                            <a href="../secciones/nosotros.html">Trabajar con nosotros</a>
+                            <a href="../secciones/nosotros.html">Trabajar con Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="../secciones/trámites.html">Otros Trámites</a>
                         </li>
                     </ul>
                 </nav>
@@ -113,12 +128,13 @@
         </div>
         <div class="divFooter">    
             <h4>CONTACTO Y HORARIOS</h4>
-            <p>Lunes a Viernes 10:00hs a 17:00hs</p>
-            <p>Teléfono: 011 XXXX XXXX</p>
+            <p>Lunes a Viernes 10:00hs a 17:00hs y Sábados de 9:00hs a 12:00hs</p>
+            <p>Domingos y feriados cerrado</p>
+            <p>Teléfono: 011-11111111</p>
             <section class="iconsFooter">
-                <img src="../imagenes/icons8-facebook-nuevo.svg" alt="Facebook"><a href="http://">Facebook</a>
-                <img src="../imagenes/icons8-instagram.svg" alt="Instagram"><a href="http://">Instagram</a>
-                <img src="../imagenes/icons8-youtube.svg" alt="Youtube"><a href="http://">Canal Youtube</a>
+                <img src="../imagenes/icons8-facebook-nuevo.svg" alt="Facebook"><a href="http://"></a>
+                <img src="../imagenes/icons8-instagram.svg" alt="Instagram"><a href="http://"></a>
+                <img src="../imagenes/icons8-youtube.svg" alt="Youtube"><a href="http://"></a>
             </section>
         </div>    
     </footer>

@@ -1,22 +1,27 @@
 
-
+html{
+    width: 100%;
+}
 body{
+    margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+
 }
 header{
     grid-area: header;
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 2rem;
     background-color: rgba(236, 229, 164, 0.612);
-    background: linear-gradient(to top, white, #eea849);    
+    background: linear-gradient(to top, white, #eea849);
+
+       
 }
 header nav {
     height: 100%;
@@ -28,6 +33,7 @@ main{
     width: 100%;
     color: white;
 }
+
 footer{
     background-color: rgba(236, 229, 164, 0.612);
     width: 100%;
@@ -37,7 +43,7 @@ footer{
     background: linear-gradient(to bottom, white, #eea849);
 }
 h1{
-    color: forestgreen;
+    color: black;
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -58,7 +64,18 @@ h3{
     font-family: 'Open Sans', sans-serif;
     color: black;
 }
-button:hover{
-    background-color: greenyellow;
-    transition-duration: 3s;
+button{
+    padding: 5px;
+        a{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bolder;
+        color: black;
+    }
 }
+body main section div p{
+    padding: 0 10%;
+}
+body main section p{
+    padding: 0 5%;
+}
+

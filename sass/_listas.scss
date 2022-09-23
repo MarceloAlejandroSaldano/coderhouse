@@ -3,6 +3,9 @@ ul{
 }
 li{
     display: inline-block;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 2px;
 }
 a{
     text-decoration: none;
@@ -10,10 +13,20 @@ a{
 ul li a{
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
-    color: white;
+    color: black;
 }
-a:hover{
-    color: white;
+.liHeader{
+    border: 2px solid grey;
+    padding: 3px;
+    margin: 2px;
+    border-radius: 6px;
+}
+li:hover{
     background-color: grey;
     transition-duration: 0.5s;
+    a{
+        color: white;
+        
+    }
 }
+

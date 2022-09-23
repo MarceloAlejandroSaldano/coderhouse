@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,100;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Fjalla+One&family=Open+Sans:wght@300;400&family=Roboto:ital,wght@0,100;1,100&display=swap');
 @import "listas";
 @import "generales";
 *{
@@ -7,26 +7,33 @@
     box-sizing: border-box;
 }
 
-/*----------- MOBILE FIRST ------------*/
+/*---------------------- MOBILE FIRST ------------------*/
 /*--------      HEADER       -------*/
 
 .boton {
     border: 2px solid grey;
-    border-radius: .2em;
-    background-color: red;
+    border-radius: 50px;
   }
   
+
 .boton--cursos {
     @extend .boton;
-    background-color: gold;
+    width: 100%;
+    min-width: 280px;
+    max-width: 600px;
+    
 }
-
-
-
+.boton--cursos:hover{
+    background-color: grey;
+    transition: width 2s ease-in 0s;
+    background: radial-gradient( rgb(69, 18, 96), #eea849);
+            a{
+        color: white;
+        
+    }
+}
 .ulHeader{
-    background-color: rgba(236, 229, 164, 0.612);
-    border: 2px solid gold;
-    height: 25vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,17 +49,27 @@
 .logo{
     @include logo(100px, 100px)
 }
+@keyframes rotate{
+    0%{
+        rotate: (0deg);
+    }
+    100%{
+        rotate: (360deg);
+    }
+}
+.logo:hover{
+    animation: rotate 1.5s ease-in 0s;
+}
 
 .ulFooter{
     display: flex;
     flex-direction: column;
     padding-left: 0rem;
 }
-
+.iconsContacto{
+    align-items: center;
+}
 /*-----------------      MAIN       --------------*/
-
-
-
 main, article, p{
     text-align: center;
     color: black;
@@ -60,12 +77,11 @@ main, article, p{
 
 .tituloInicial1{
     color: black;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 550;
     font-size: 35px;
     margin-top: 40px;
-    border: 2px solid grey;
     grid-area: tituloInicial1;
     background-color:rgba(236, 229, 164, 0.612);
 }
@@ -76,14 +92,13 @@ main, article, p{
     font-weight: 550;
     font-size: 27px;
     margin-bottom: 40px;
-    border: 2px solid grey;
     grid-area: tituloInicial2;
     background-color: rgba(236, 229, 164, 0.612);
     margin: 0 50px;
 }
-.tituloInicialSub2{
+.tituloHeader{
     color: black;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-style: normal;
     font-weight: 550;
     font-size: 27px;
@@ -92,15 +107,39 @@ main, article, p{
     grid-area: tituloInicial2;
     background-color: rgba(236, 229, 164, 0.612);
     margin: 10px 50px;
+    padding: 5px;
 }
-
+.tituloInicialSub2{
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 27px;
+    margin-bottom: 40px;
+    grid-area: tituloInicial2;
+    background-color: rgba(236, 229, 164, 0.612);
+    margin: 10px 50px;
+}
+.tramitesContainer2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
 /*----------------      FOOTER       ---------------*/
 
 
 img{
     align-content:center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+}
+.bannerHome{
+    width: 100%;
+    min-width: 280px;
+    max-width: 600px; 
+}
+.bannerCursos{
+    width: 100%;
+    max-width: 600px;
 }
 iframe{
     align-content: center;
@@ -116,8 +155,12 @@ iframe{
 .iframHomeAutos{
     grid-area: iframHomeAutos;
 }
-.parrafoMainHome{
-    grid-area: parrafoMainHome;
+.parrafoMainHome1{
+    grid-area: parrafoMainHome1;
+    color: black;
+}
+.parrafoMainHome2{
+    grid-area: parrafoMainHome2;
     color: black;
 }
 .subtituloIframeHome{
@@ -165,14 +208,13 @@ iframe{
     grid-template-areas: 
     "tituloInicial1"
     "tituloInicial2"
-    "parrafoMainHome"
-    "imgHomeFondoMotos"
-    "imgHomeFondoAutos"
+    "parrafoMainHome1"
+    "parrafoMainHome2"
+    "homeContainer1"
     "subtituloIframeHome"
-    "iframeHomeMotos"
-    "iframeHomeAutos";
+    "homeContainer2";
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto;
 
 }
 
@@ -193,6 +235,8 @@ iframe{
     flex-direction: column;
     border: 2px solid gold;
     gap: 4px;
+    padding: 10px;
+    margin: 10px 0;
 }
 .cursoIntermedioAuto{
     display: flex;
@@ -201,6 +245,8 @@ iframe{
     flex-direction: column;
     border: 2px solid gold;
     gap: 4px;
+    padding: 10px;
+    margin: 10px 0;
 }
 .cursoAvanzadoAuto{
     display: flex;
@@ -209,6 +255,8 @@ iframe{
     flex-direction: column;
     border: 2px solid gold;
     gap: 4px;
+    padding: 10px;
+    margin: 10px 0;
 }
 .cursoBasicoMoto{
     display: flex;
@@ -217,6 +265,8 @@ iframe{
     flex-direction: column;
     border: 2px solid gold;
     gap: 4px;
+    padding: 10px;
+    margin: 10px 0;
 }
 .cursoAvanzadoMoto{
     display: flex;
@@ -225,6 +275,8 @@ iframe{
     flex-direction: column;
     border: 2px solid gold;
     gap: 4px;
+    padding: 10px;
+    margin: 10px 0;
 }
 footer{
     grid-area: footer;
@@ -236,15 +288,31 @@ footer{
     "header"
     "main"
     "footer";
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
 }
 
+.clases{
+    display: flex;
+    flex-direction: column;
+    background: rgba(128, 128, 128, 0.2);
+    margin: 1% 5% 2%;
+}
+.form{
+    background: rgba(10, 10, 10, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-/*---------------------------- Tablet ----------------------------------*/
+}
+/*---------------------- Tablet ------------------*/
 /*-------------      HEADER       -----------*/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 620px) {
     
     header{
         grid-area: header;
@@ -258,18 +326,21 @@ footer{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+
+        height: 130px;
     }
 
 
     .ulHeader{
-        background-color: rgba(236, 229, 164, 0.612);
-        border: 2px solid grey;
+        background-color: rgba(236, 229, 164, 0);
+        border: none;
         height: 90%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content:space-around;
     }
+
     .ulFooter{
         display: flex;
         flex-direction: column;
@@ -278,13 +349,20 @@ footer{
     
     
     /*------------------      MAIN       ---------------*/
-    
+    main{
+        padding-top: 130px;
+    }
+    .main-header{
+        left: 0;
+        top: 0;
+        position: fixed;
+        z-index: 6;
+    }
     h1{
         padding: 20px;
-        margin: 40px 20px 40px 20px;
+        margin: 10px 20px 10px 20px;
     }
     .tituloInicial{
-        color: cornflowerblue;
         font-family: 'Open Sans', sans-serif;
         font-style: normal;
         font-weight: 600;
@@ -292,16 +370,26 @@ footer{
         border: 2px solid gold;
         grid-area: tituloInicial;
     }
-    
+    .tramitesContainer2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 0px;
+        padding: 0px;
+    }
     /*------------------      FOOTER       ---------------------*/
 
     footer{
         background-color: rgba(236, 229, 164, 0.612);
         width: 100%;
+        height: auto;
         display: flex;
         flex-direction: row;
         align-items:baseline;
-        justify-content: center;
+        justify-content: space-around;
+        padding-top: 30px;
+        flex-wrap: wrap;
+        background: linear-gradient(to bottom, white, #eea849);
     }
     
     img{
@@ -331,8 +419,8 @@ footer{
         grid-template-areas: 
         "tituloInicial1"
         "tituloInicial2"
-        "parrafoMainHome"
-        "carousel"
+        "parrafoMainHome1"
+        "parrafoMainHome2"
         "homeContainer1"
         "subtituloIframeHome"
         "homeContainer2";
@@ -394,16 +482,17 @@ footer{
         "tituloInicial  tituloInicial"
         "main           main"
         "footer         footer";
-        grid-template-columns: auto  auto;
+        grid-template-columns: 1fr  1fr;
         grid-template-rows: auto auto auto auto;
     }
     
     .cursosContainer{
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         column-gap: 4px;
     }
-    
+
     .cursos{
         display:flex;
         align-items: flex-start;
@@ -416,5 +505,298 @@ footer{
         display:flex;
         align-items: center;
         flex-direction: column;
+        padding: 0;
+        gap: 0px;
     }
+    .iconsFooter{
+        display: flex;
+        align-items: center;
+        width: 200px;
+        justify-content: space-around;
+    }
+    .clases{
+        display: flex;
+        flex-direction: row;
+        background: rgba(128, 128, 128, 0.2);
+        margin: 1% 5% 2%;
+    }
+
+
+}
+/*---------------------- Desktop ------------------*/
+/*-------------      HEADER       -----------*/
+
+@media screen and (min-width: 1024px) {
+    header{
+        grid-area: header;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+        background-color: rgba(236, 229, 164, 0.612);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        height: 130px;
+    }
+
+
+    .ulHeader{
+        background-color: rgba(236, 229, 164, 0);
+        border: none;
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+    }
+
+    .ulFooter{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0rem;
+    }
+    
+    
+    /*------------------      MAIN       ---------------*/
+    main{
+        padding-top: 130px;
+    }
+    .main-header{
+        left: 0;
+        top: 0;
+        position: fixed;
+        z-index: 6;
+    }
+    h1{
+        padding: 20px;
+        margin: 10px 20px 10px 20px;
+    }
+    .tituloInicial{
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        border: 2px solid gold;
+        grid-area: tituloInicial;
+    }
+    .cursoBasicoAuto{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        border: 2px solid gold;
+        gap: 4px;
+        padding: 28px 10px;
+        margin: 10px;
+    }
+    .cursoIntermedioAuto{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        border: 2px solid gold;
+        gap: 4px;
+        padding: 28px 10px;
+        margin: 10px;
+    }
+    .cursoAvanzadoAuto{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        border: 2px solid gold;
+        gap: 4px;
+        padding: 28px 10px;
+        margin: 10px;
+    }
+    .cursoBasicoMoto{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        border: 2px solid gold;
+        gap: 4px;
+        padding: 28px 10px;
+        margin: 10px;
+    }
+    .cursoAvanzadoMoto{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        border: 2px solid gold;
+        gap: 4px;
+        padding: 28px 10px;
+        margin: 10px;
+    }
+    .cursosContainer{
+        display: flex;
+        justify-content: space-around;
+        column-gap: 4px;
+    }
+    .autosContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+    }
+    .motosContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+    }
+    .cursos{
+        display:flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-direction: column;
+        border: 2px solid gold;
+        
+    }
+    .tramitesContainer{
+        display: flex;
+        flex-direction: row;
+    }
+    .tramitesContainer2{
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        padding: 0px;
+    }
+    /*------------------      FOOTER       ---------------------*/
+
+    footer{
+        background-color: rgba(236, 229, 164, 0.612);
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: row;
+        align-items:baseline;
+        justify-content: space-around;
+        padding-top: 30px;
+    }
+    
+    img{
+        align-content:center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    iframe{
+        align-content: center;
+        margin: 40px 40px 40px 40px;
+    }
+    
+    .grillaBodyHome {
+        display: grid;
+        width: 100%;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
+    .grillaMainHome {
+        display: grid;
+        width: 100%;
+        grid-template-areas: 
+        "tituloInicial1"
+        "tituloInicial2"
+        "parrafoMainHome1"
+        "parrafoMainHome2"
+        "homeContainer1"
+        "subtituloIframeHome"
+        "homeContainer2";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto;
+
+    }
+
+    .tituloInicial2{
+        margin-bottom: 20px;
+    }
+    .tituloInicialSub2{
+        margin-bottom: 20px;    
+    }
+    .homeContainer1{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content:space-around;
+    }
+    .homeContainer2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imgHome.fondoMotos{
+        width: 300px;
+        height: 250px;
+        border: 8px solid grey;
+        background: url(../imagenes/motos_motos.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        grid-area: imgHomeFondoMotos;
+    }
+    .imgHome.fondoAutos{
+        width: 300px;
+        height: 250px;
+        border: 8px solid grey;
+        background: url(../imagenes/autos_autos.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        grid-area: imgHomeFondoAutos;
+    }
+
+    .carousel-item{
+        grid-area: carousel;
+    }
+
+    .grillaBodyCursos {
+        display: grid;
+        width: 100%;
+        grid-template-areas: 
+        "header         header"
+        "tituloInicial  tituloInicial"
+        "main           main"
+        "footer         footer";
+        grid-template-columns: 1fr  1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+    
+
+    .divFooter{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+        gap: 10px;
+    }
+    .iconsFooter{
+        display: flex;
+        align-items: center;
+        width: 200px;
+        justify-content: space-around;
+    }
+    .clases{
+        display: flex;
+        flex-direction: row;
+        background: rgba(128, 128, 128, 0.2);
+        margin: 1% 5% 2%;
+    }
+
+
+
+
 }
